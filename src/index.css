@@ -1,0 +1,235 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 20px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 90%;
+  padding: 2rem;
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 80px; /* Added to account for fixed navbar */
+}
+
+/* ... rest of your existing styles ... */
+
+.navbar {
+  background-color: black;
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar a.active {
+  background-color: #444;
+  color: #fff;
+}
+
+.style {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 90%;
+  padding: 2rem;
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home input,
+.home textarea {
+  padding: 1rem;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.home textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.home input:focus,
+.home textarea:focus {
+  border-color: #666;
+}
+
+.home button {
+  padding: 1rem 2rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home button:hover {
+  background-color: #555;
+}
+
+.home input::placeholder,
+.home textarea::placeholder {
+  color: #666;
+}
+
+.note-card {
+  background-color: #111;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.note-card h3 {
+  color: white;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.note-card a {
+  padding: 0.5rem 1rem;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.note-card a:hover {
+  background-color: #555;
+}
+
+.note-card button {
+  padding: 0.5rem 1rem;
+  background-color: #662222;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note-card button:hover {
+  background-color: #883333;
+}
+
+/* For the container of all notes */
+.notes-container {
+  max-width: 800px;
+  width: 90%;
+  margin: 80px auto 2rem;
+  padding: 1rem;
+}
+
+/* For the "No notes found" message */
+.notes-container p {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.note-view {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #000000;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 80px auto;
+  color: white;
+  
+}
+
+/* Content section (heading and text) */
+.note-view-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Button container */
+.note-view-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.note-view button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Copy button */
+.note-view button:nth-child(1) {
+  background-color: #8e44ad;  /* Purple */
+  color: white;
+}
+
+.note-view button:nth-child(1):hover {
+  background-color: #9b59b6;
+}
+
+/* Share button */
+.note-view button:nth-child(2) {
+  background-color: #d35400;  /* Orange */
+  color: white;
+}
+
+.note-view button:nth-child(2):hover {
+  background-color: #e67e22;
+}
